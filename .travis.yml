@@ -10,6 +10,7 @@ env:
 services:
   - docker
 install:
+  - ifconfig
   - pip install .[tests]
 script:
   - pytest -s tests/ integration_tests/
