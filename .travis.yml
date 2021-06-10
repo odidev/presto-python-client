@@ -1,16 +1,15 @@
 language: python
 python:
-  - "2.7"
-  - "3.5"
-  - "3.6"
+  #- "2.7"
+  #- "3.5"
+  #- "3.6"
   - "3.7"
-  - "pypy3.6-7.0.0"
+  #- "pypy3.6-7.0.0"
 env:
   - PRESTO_VERSION=0.202
 services:
   - docker
 install:
-  - ifconfig
   - pip install .[tests]
 script:
   - pytest -s tests/ integration_tests/
